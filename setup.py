@@ -1,12 +1,12 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
-    name="NekoBot",
+    name="nekobot",
     version="1.0",
     author="hibikidesu",
     description="NekoBot API Python Wrapper",
     keywords="nekobot api discord",
     url="https://github.com/hibikidesu/NekoBotAPI-py",
-    packages=["NekoBot"]
+    packages=find_packages()
 )
