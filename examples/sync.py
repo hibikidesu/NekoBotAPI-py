@@ -1,0 +1,30 @@
+from NekoBot import NekoBot
+
+
+if __name__ == "__main__":
+    api = NekoBot()
+    img = api.get_image("neko").message
+    print("Image: {}".format(img))
+    print("Threats: {}".format(api.threats(img)))
+    print("Baguette: {}".format(api.baguette(img)))
+    print("Clyde: {}".format(api.clyde("owo")))
+    print("Ship: {}".format(api.ship(img, img)))
+    print("Captcha: {}".format(api.captcha(img, "hibiki")))
+    print("whowouldwin: {}".format(api.whowouldwin(img, img)))
+    print("Changemymind: {}".format(api.changemymind("baka")))
+    print("ddlc: {}".format(api.ddlc("m", "bedroom", "1", "1t", "baka")))
+    print("jpeg: {}".format(api.jpeg(img)))
+    print("lolice: {}".format(api.lolice(img)))
+    print("kannagen: {}".format(api.kannagen("baka")))
+    print("iphonex: {}".format(api.iphonex(img)))
+    print("amimeface: {}".format(api.animeface(img)))
+    print("awooify: {}".format(api.awooify(img)))
+    print("trap: {}".format(api.trap("hibiki", "abc", img)))
+    print("trumptweet: {}".format(api.trumptweet("owo")))
+    print("tweet: {}".format(api.tweet("hibikiqt", "owo")))
+    print("deepfry: {}".format(api.deepfry(img)))
+    print("blurpify: {}".format(api.blurpify(img)))
+    print("phcomment: {}".format(api.phcomment(img, "owo", "hibiki")))
+    print("magik: {}".format(api.magik(img)))
+    print("trash: {}".format(api.trash(img)))
+    api.close()
