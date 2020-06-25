@@ -5,8 +5,9 @@ import typing
 class Response(typing.NamedTuple):
     message: str
     success: bool
-    version: str
+    version: str = ""
     color: int = 0
+    status: int = 200
 
 
 class BaseClass:
@@ -40,7 +41,7 @@ class NekoBot(BaseClass):
         )
         try:
             data = Response(**r.json())
-        except:
+        except Exception as e:
             data = r.content
         return data
 
