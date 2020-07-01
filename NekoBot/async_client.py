@@ -6,14 +6,15 @@ import typing
 
 class NekoBotAsync(BaseClass):
 
-    def __init__(self, *, loop: asyncio.AbstractEventLoop = None):
-        super().__init__()
+    def __init__(self, authorization: str = "", *, loop: asyncio.AbstractEventLoop = None):
+        super().__init__(authorization)
         if loop is None:
             loop = asyncio.get_event_loop()
         self._http = aiohttp.ClientSession(
             loop=loop,
             headers={
-                "User-Agent": self.user_agent
+                "User-Agent": self.user_agent,
+                "Authorization": self.authorization
             }
         )
 

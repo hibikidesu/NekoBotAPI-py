@@ -14,8 +14,9 @@ class BaseClass:
 
     BASE_URL = "https://nekobot.xyz/api"
 
-    def __init__(self):
+    def __init__(self, authorization: str = ""):
         self.user_agent = "NekoBotAPI-py/1.0"
+        self.authorization = authorization
         self._http = None
 
     def _request(self, path: str, params: dict) -> dict:
@@ -24,8 +25,8 @@ class BaseClass:
 
 class NekoBot(BaseClass):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, authorization: str = ""):
+        super().__init__(authorization)
         self._http = requests.Session()
 
     def close(self):
@@ -36,7 +37,8 @@ class NekoBot(BaseClass):
             self.BASE_URL + path,
             params=params,
             headers={
-                "User-Agent": self.user_agent
+                "User-Agent": self.user_agent,
+                "Authorization": self.authorization
             }
         )
         try:

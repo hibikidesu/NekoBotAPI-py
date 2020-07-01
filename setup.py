@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="nekobot",
-    version="1.0",
+    version="1.1",
     author="hibikidesu",
     description="NekoBot API Python Wrapper",
     keywords="nekobot api discord",
