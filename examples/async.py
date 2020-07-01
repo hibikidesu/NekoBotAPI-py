@@ -1,4 +1,4 @@
-from NekoBot import NekoBotAsync
+from nekobot import NekoBotAsync
 import asyncio
 
 

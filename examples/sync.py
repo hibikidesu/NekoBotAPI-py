@@ -1,4 +1,4 @@
-from NekoBot import NekoBot
+from nekobot import NekoBot
 
 
 if __name__ == "__main__":
