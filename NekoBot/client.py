@@ -345,3 +345,13 @@ class NekoBot(BaseClass):
             "type": "trash",
             "url": url
         })
+
+    def stickbug(self, url: str) -> typing.Union[Response, bytes]:
+        """
+        :param url: Image url for stickbug
+        :return:
+        """
+        return self._request("/imagegen", {
+            "type": "stickbug",
+            "url": url
+        })

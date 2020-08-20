@@ -327,3 +327,13 @@ class NekoBotAsync(BaseClass):
             "type": "trash",
             "url": url
         })
+
+    async def stickbug(self, url: str) -> typing.Union[Response, bytes]:
+        """
+        :param url: Image url for stickbug
+        :return:
+        """
+        return await self._request("/imagegen", {
+            "type": "stickbug",
+            "url": url
+        })

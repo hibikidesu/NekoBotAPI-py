@@ -28,6 +28,7 @@ async def async_test():
     print("phcomment: {}".format(await api.phcomment(img, "owo", "hibiki")))
     print("magik: {}".format(await api.magik(img)))
     print("trash: {}".format(await api.trash(img)))
+    print("stickbug: {}".format(await api.stickbug(img)))
     await api.close()
 
 

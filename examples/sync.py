@@ -27,4 +27,5 @@ if __name__ == "__main__":
     print("phcomment: {}".format(api.phcomment(img, "owo", "hibiki")))
     print("magik: {}".format(api.magik(img)))
     print("trash: {}".format(api.trash(img)))
+    print("stickbug: {}".format(api.stickbug(img)))
     api.close()
